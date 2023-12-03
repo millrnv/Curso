@@ -2,40 +2,46 @@ package modelo;
 
 public class Estudiante {
 
+    Curso curso;
     private String nombre;
-    private String email;
     private String rut;
+    private String email;
 
-    public Estudiante(String nombre, String email, String rut){
-
+    public Estudiante(String nombre, String rut, String email) {
         this.nombre = nombre;
-        this.email = email;
         this.rut = rut;
+        this.email = email;
 
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
-        return email;
+    public String getRut() {
+        return this.rut;
     }
+
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public String getEmail() {
+        return this.email;
+    }
+
 
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getRut() {
-        return rut;
-    }
-
-    public void setRut(String rut) {
-        this.rut = rut;
+    public String toString() {
+        return "Estudiante {" + "Nombre =" + nombre + ", Rut =" + rut + ", Email =" + email + '}';
     }
 
 
